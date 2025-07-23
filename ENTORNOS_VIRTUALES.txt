@@ -1,0 +1,62 @@
+#Abre CMD, este còdigo señala la versiòn de Python instalada
+py -0
+py --version
+
+#INSTALA LA MEJOR VERSIÒN PARA TRABAJAR CON LAS BIBLIOTECAS QUE VAS A USAR.
+#Vuelve a abrir CMD, este còdigo y verifica las versiones de Python instaladas.
+py -0
+
+#Verifica cuàl versiòn de Python està abriendo por defecto (DEFAULT).
+py --version
+python
+exit()
+
+#PARA CAMBIAR LA VERSIÒN DE USO POR DEFAULT
+
+1. ABRIR EDITAR LAS VARIABLES DEL ENTORNO DEL SISTEMA
+2. CLIC EN VARIABLES DE ENTORNO
+3. BUSCAR Variables de usuario para... y cliquear PATH
+4. CLIC EN EDITAR
+5. SELECCIONA LA ULTIMA VERSIÒN DE PYTHON Y SUBALA HASTA EL INICIO DE LA LISTA 
+(todo lo que contenga el nùmero de versión en el orden que están) 
+
+6. Verifica cuàl versiòn de Python està abriendo por defecto (DEFAULT).
+
+#cree una carpeta en su pc, y abrala con el Vscode
+#En TERMINAL crear un entorno virtual:
+python -m venv nombredelproyeto
+
+
+#activar el entorno
+nombredelproyeto\Scripts\activate
+
+#si aparece error abrir
+nombredelproyeto\Scripts\activate : No se puede cargar el archivo porque la ejecución de scripts está 
+deshabilitada en este sistema.
+    + CategoryInfo          : SecurityError: (:) [], PSSecurityException
+    + FullyQualifiedErrorId : UnauthorizedAccess
+
+#abre WINDOWS POWER SHELL y digita este código:
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+#Y luego este código:
+Get-ExecutionPolicy -List
+#Deberías ver RemoteSigned en CurrentUser.
+
+#VOLVEMOS AL PROYECTO CON ENTORNO VIRTUAL DE VSCODE:
+nombredelproyeto\Scripts\activate
+
+#Digita el código, para ver las librerías instaladas.
+pip list
+
+#Instala las librerías de tu proyecto.
+#Luego utiliza este codigo para crear un TXT que contenga tus librerías.
+pip frezee > requirements.txt
+
+#digita el comando para cerrar el entorno virtual.
+deactivate
+
+PARA ESTABLECER OTRA VERSIÓN DE PYTHON COMO INTERPRETE:
+TECLEA: CTRL + SHIFT + P
+ELIGE Python: Select Interpreter
+ESCOGE LA VERSIÓN DE PYTHON A USAR.
